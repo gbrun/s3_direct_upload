@@ -22,7 +22,6 @@ $.fn.S3Uploader = (options) ->
     remove_failed_progress_bar: false
     progress_bar_target: null
     click_submit_target: null
-    accept_file_types: /(\.|\/)(png|jpg|gif)$/i
 
   $.extend settings, options
 
@@ -35,8 +34,6 @@ $.fn.S3Uploader = (options) ->
 
   setUploadForm = ->
     $uploadForm.fileupload
-
-      acceptFileTypes: settings.accept_file_types
 
       add: (e, data) ->
         file = data.files[0]
